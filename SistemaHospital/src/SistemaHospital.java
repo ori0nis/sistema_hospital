@@ -36,7 +36,7 @@ public class SistemaHospital {
                 int sintoma = mostrarMenu(consola);
                 var paciente = exploracion(consola, sintoma);
                 imprimirDiagnostico(nuss, paciente);
-                if(paciente != null){
+                if(paciente != null || sintoma == 5){
                     salir = true;
                 }
             }
@@ -125,7 +125,7 @@ public class SistemaHospital {
                 paciente = new Paciente(sintoma, exploracion, nivelPrioridad, temperaturaActual);
             }
             case 5 -> {
-                System.out.println("Que tenga un buen día");
+                System.out.println("Que tenga un buen día!");
             }
             default -> {
                 System.out.println("Opción inválida");
